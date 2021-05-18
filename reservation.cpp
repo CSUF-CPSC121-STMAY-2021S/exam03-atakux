@@ -3,6 +3,7 @@
 #include <string>
 #include <cstdlib>
 #include <iomanip>
+#include <algorithm>
 
 using namespace std;
 
@@ -43,4 +44,19 @@ void Reservation::addPerson(string UserName, unsigned short mTime, string phoneN
 
   elementNum++;
 
+  bool swap = true;
+  for(int MAX = getCount() - 1; MAX > 0 && swap == true; MAX--)
+  {
+    swap = false;
+    for(int i = 0; i < MAX; i++)
+    {
+      if(temp[i].militaryTime > temp[i + 1].militaryTime)
+      {
+          User t = temp[i];
+          temp[i] = temp[i + 1];
+          temp[i + 1] = t;
+          swap = true;
+      }
+    }
+  }
 }

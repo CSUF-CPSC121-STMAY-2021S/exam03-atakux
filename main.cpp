@@ -22,15 +22,14 @@ int main()
   do{
     cout << "*** TUFFY TITAN RESERVATION PROGRAM ***" << endl;
 
-    cin.ignore();
+
     cout << endl << "Enter new name or 'exit': ";
     getline(cin, pName);
-
 
     cout << endl << "Enter military time: ";
     cin >> timeyTime;
 
-
+    cin.ignore();
     cout << endl << "Enter phone: ";
     getline(cin, phone);
 
@@ -43,15 +42,13 @@ int main()
     cout << "============================================================" << endl;
     for(int i = 0; i <= count; i++)
     {
-      unsigned short mcTime = reserve[i].getTime(i);
-
-      cout << left << setw(20) << reserve[i].displayTime(mcTime)
+      cout << left << setw(20) << reserve[i].getTime(i)
            << left << setw(20) << reserve[i].getName(i)
            << left << setw(20) << reserve[i].getPhone(i)
            << setw(20) << setfill(' ') << endl;
     }
 
-  }while(name != "exit" || count != MAX);
+  }while(pName != "exit");
 
   return 0;
 }
