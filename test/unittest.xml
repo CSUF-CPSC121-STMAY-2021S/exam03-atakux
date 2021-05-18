@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="4" failures="1" disabled="0" errors="0" time="0.002" timestamp="2021-05-17T20:57:11" name="AllTests">
+  <testsuite name="Person" tests="1" failures="0" disabled="0" errors="0" time="0" timestamp="2021-05-17T20:57:11">
+    <testcase name="constructor" status="run" result="completed" time="0" timestamp="2021-05-17T20:57:11" classname="Person" />
+  </testsuite>
+  <testsuite name="Reservation" tests="3" failures="1" disabled="0" errors="0" time="0.002" timestamp="2021-05-17T20:57:11">
+    <testcase name="addPersonNoMax" status="run" result="completed" time="0.002" timestamp="2021-05-17T20:57:11" classname="Reservation" />
+    <testcase name="addPersonCheckSort" status="run" result="completed" time="0" timestamp="2021-05-17T20:57:11" classname="Reservation">
+      <failure message="test/unittest.cpp:30&#x0A;Expected equality of these values:&#x0A;  reservation.getName(1)&#x0A;    Which is: &quot;Tuffy900&quot;&#x0A;  &quot;Tuffy700&quot;&#x0A;### ERROR calling addPerson with (name Tuffy500 at time 500), (name Tuffy900 at time 900), (name Tuffy700 at time 700) added and sorted the time at element 1 should be &apos;Tuffy700&apos; ###" type=""><![CDATA[test/unittest.cpp:30
+Expected equality of these values:
+  reservation.getName(1)
+    Which is: "Tuffy900"
+  "Tuffy700"
+### ERROR calling addPerson with (name Tuffy500 at time 500), (name Tuffy900 at time 900), (name Tuffy700 at time 700) added and sorted the time at element 1 should be 'Tuffy700' ###]]></failure>
+    </testcase>
+    <testcase name="getPersonBeyondCount" status="run" result="skipped" time="0" timestamp="2021-05-17T20:57:11" classname="Reservation" />
+  </testsuite>
+</testsuites>

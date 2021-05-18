@@ -22,27 +22,7 @@ public:
 
   void setTime(unsigned short time)
   {
-    while (time > 0)
-    {
-      int hour = time % 1000;
-      hour /= 10;
-      int minute = time % 100;
-
-      if(hour > 23)
-      {
-        time = 0;
-        break;
-      }
-
-      if(minute > 59)
-      {
-        time = 0;
-        break;
-      }
-    }
-
     militaryTime = time;
-
   }
 
   void setPhone(string phone)
@@ -55,7 +35,7 @@ public:
     return name;
   }
 
-  string getTime()
+  unsigned short getTime()
   {
     return militaryTime;
   }
@@ -65,9 +45,5 @@ public:
     return phoneNum;
   }
 };
-
-string Person::name;
-unsigned short Person::militaryTime;
-string Person::phoneNum;
 
 #endif

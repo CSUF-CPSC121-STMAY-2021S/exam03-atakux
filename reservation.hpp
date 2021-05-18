@@ -9,11 +9,17 @@
 
 using namespace std;
 
-class Reservation : public Person
+struct User
+{
+  string name, phoneNum;
+  unsigned short militaryTime;
+};
+
+class Reservation
 {
 private:
   int elementNum;
-  Person * elements;
+  User * elements;
 
 public:
   Reservation();
@@ -30,7 +36,7 @@ public:
     return elements[x].name;
   }
 
-  int getTime(int x)
+  unsigned short getTime(int x)
   {
     return elements[x].militaryTime;
   }
@@ -40,7 +46,6 @@ public:
     return elements[x].phoneNum;
   }
 
-  string displayTime(unsigned short);
 
   ~Reservation();
 

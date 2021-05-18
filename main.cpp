@@ -25,15 +25,14 @@ int main()
     cin.ignore();
     cout << endl << "Enter new name or 'exit': ";
     getline(cin, pName);
-    reserve[count].setName(pName);
+
 
     cout << endl << "Enter military time: ";
     cin >> timeyTime;
-    reserve[count].setTime(timeyTime);
+
 
     cout << endl << "Enter phone: ";
     getline(cin, phone);
-    reserve[count].setPhone(phone);
 
     reserve[count].addPerson(pName, timeyTime, phone);
 
@@ -51,7 +50,7 @@ int main()
            << left << setw(20) << reserve[i].getPhone(i)
            << setw(20) << setfill(' ') << endl;
     }
-    
+
   }while(name != "exit" || count != MAX);
 
   return 0;
